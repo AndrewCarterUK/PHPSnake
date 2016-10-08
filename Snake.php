@@ -213,10 +213,16 @@ class Snake
       case self::RIGHT: $newPoint[0]++; break;
     }
 
-    foreach ($this->snakes as $snake) {
-      foreach ($snake as $point) {
+    foreach ($this->snakes as $otherSnake => $snake) {
+      foreach ($snake as $index => $point) {
+        $facePoint = ($index == count($snake) - 1);
+
         if ($this->pointIsSame($point, $newPoint)) {
           if ($this->keepAlive) {
+            if ($facePoint) {
+              $this->snakes[$otherSnake] = [$point];
+            }
+
             $this->snakes[$key] = [$this->snakes[$key][0]];
             break;
           } else {
