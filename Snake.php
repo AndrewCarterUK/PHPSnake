@@ -100,7 +100,7 @@ class Snake
     $loop->addPeriodicTimer(0.1, function () use ($loop) {
       $active = $this->step();
       $this->render();
-      $this->print();
+      $this->printGame();
 
       if (!$active) {
         $loop->stop();
@@ -305,7 +305,7 @@ class Snake
     $this->buffer[$this->food[1]][$this->food[0]] = self::COLOUR_FOOD . "\xF0\x9F\x8D\xB2";
   }
 
-  public function print()
+  public function printGame()
   {
     echo "\033[J";
 
