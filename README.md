@@ -2,6 +2,14 @@
 
 This game was created as a rule breaking entry to the Bulgaria PHP Conference 2016 Hackathon. Joshua Thijssen assisted with the development of this entry, but also got interested enough to make his own (awesome) [PHP snake game](https://github.com/jaytaph/bgphpsnake).
 
+## Setup
+
+Using [composer](https://getcomposer.org):
+
+```
+composer install
+```
+
 ## Multi Player Mode
 
 ```sh
