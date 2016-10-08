@@ -18,6 +18,8 @@ php snake.php mk
 
 In this mode the **walls are not boundaries**, if you crash into the other player or yourself you will lose the whole of your snake.
 
+The arrow keys control one of the snakes and the 'A', 'S', 'D' and 'W' keys control the other.
+
 You have 100 seconds to play the game, the winner is the player with the longest snake at the end.
 
 ## Single Player Mode
