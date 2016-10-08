@@ -1,6 +1,6 @@
 # PHP Snake
 
-This game was created as a rule breaking entry to the Bulgaria PHP Conference 2016 Hackathon. Joshua Thijssen assisted with the development of this entry, but also got interested enough to make his own (awesome) PHP [snake game](https://github.com/jaytaph/bgphpsnake).
+This game was created as a rule breaking entry to the Bulgaria PHP Conference 2016 Hackathon. Joshua Thijssen assisted with the development of this entry, but also got interested enough to make his own (awesome) [PHP snake game](https://github.com/jaytaph/bgphpsnake).
 
 ## Multi Player Mode
 
@@ -35,5 +35,3 @@ php snake.php
 ```sh
 php snake.php m
 ```
-
-In this mode
