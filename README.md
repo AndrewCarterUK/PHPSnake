@@ -2,7 +2,7 @@
 
 By [AndrewCarterUK ![(Twitter)](http://i.imgur.com/wWzX9uB.png)](https://twitter.com/AndrewCarterUK)
 
-This game was created as a rule breaking entry to the Bulgaria PHP Conference 2016 Hackathon. Joshua Thijssen assisted with the development of this entry, but also got interested enough to make his own (awesome) [PHP snake game](https://github.com/jaytaph/bgphpsnake).
+This game was created as a rule breaking entry to the Bulgaria PHP Conference 2016 Hackathon. [Joshua Thijssen](https://twitter.com/JayTaph) assisted with the development of this entry, but also got interested enough to make his own (awesome) [PHP snake game](https://github.com/jaytaph/bgphpsnake).
 
 ![Screenshot](http://res.cloudinary.com/andrewcarteruk/image/upload/v1475955502/PHP%20Snake.png)
 
