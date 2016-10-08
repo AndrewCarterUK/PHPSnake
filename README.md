@@ -15,7 +15,7 @@ composer install
 ## Multi Player Mode
 
 ```sh
-php snake.php mk
+php play.php mk
 ```
 
 In this mode the **walls are not boundaries**, if you crash into the other player or yourself you will lose the whole of your snake.
@@ -27,7 +27,7 @@ You have 100 seconds to play the game, the winner is the player with the longest
 ## Single Player Mode
 
 ```sh
-php snake.php
+php play.php
 ```
 
 In this mode the **walls are boundaries**, if you crash into the wall or your own snake the game is over.
@@ -39,11 +39,11 @@ The remaining two modes are possible, but not really any fun.
 ### Single Player (Keep Alive) Mode
 
 ```sh
-php snake.php
+php play.php
 ```
 
 ### Multi Player (Death) mode
 
 ```sh
-php snake.php m
+php play.php m
 ```
