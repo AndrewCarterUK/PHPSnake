@@ -39,7 +39,7 @@ The remaining two modes are possible, but not really any fun.
 ### Single Player (Keep Alive) Mode
 
 ```sh
-php play.php
+php play.php k
 ```
 
 ### Multi Player (Death) mode
