@@ -49,3 +49,8 @@ php play.php k
 ```sh
 php play.php m
 ```
+
+## Run in a Docker container
+```sh
+docker run --rm -it -v $(pwd):/code -w /code php:cli php play.php
+```
