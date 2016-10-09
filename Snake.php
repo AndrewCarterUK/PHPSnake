@@ -94,6 +94,7 @@ class Snake
         case ord('s'): $this->setDirection(Snake::DOWN, 1);  break;
         case ord('a'): $this->setDirection(Snake::LEFT, 1);  break;
         case ord('d'): $this->setDirection(Snake::RIGHT, 1); break;
+        case 0: case ord(''): exit(0); break;
       }
     });
 
