@@ -12,6 +12,9 @@ class Snake
   const COLOUR_SNAKE_1 = "\033[33m";
   const COLOUR_SNAKE_2 = "\033[34m";
 
+  const MUSIC_MAINMENU = 'aghrmyt.mod';
+  const MUSIC_GAMEPLAY = 'pd-war.xm';
+
   const DURATION = 100;
 
   private $running;
@@ -25,6 +28,7 @@ class Snake
   private $buffer;
   private $food;
   private $loser;
+  private $resourcesFolder;
 
   public function __construct($players = 1, $keepAlive = false)
   {
@@ -32,6 +36,8 @@ class Snake
     $this->height = (int) exec('tput lines') - 1;
     $this->players = $players;
     $this->keepAlive = $keepAlive;
+
+    $this->resourcesFolder = realpath(__DIR__ . '/resources');
   }
 
   public function run()
@@ -42,6 +48,8 @@ class Snake
 
     while (1) {
       $this->game();
+
+      $this->startMusic(self::MUSIC_MAINMENU);
 
       system('clear');
 
@@ -63,6 +71,7 @@ class Snake
       }
 
       sleep(4);
+      $this->stopMusic();
     }
   }
 
@@ -104,6 +113,7 @@ class Snake
       $this->printGame();
 
       if (!$active) {
+        $this->stopMusic();
         $loop->stop();
       }
     });
@@ -114,12 +124,14 @@ class Snake
           $this->secondsRemaining--;
 
           if ($this->secondsRemaining < 0) {
+            $this->stopMusic();
             $loop->stop();
           }
         }
       });
     }
 
+    $this->startMusic(self::MUSIC_GAMEPLAY);
     $loop->run();
   }
 
@@ -326,5 +338,19 @@ class Snake
     }
 
     echo "\e[?25l";
+  }
+
+  private function startMusic($musicFile)
+  {
+    if (extension_loaded('modplayer')) {
+      modplayer_play($this->resourcesFolder . '/music/' . $musicFile);
+    }
+  }
+
+  private function stopMusic()
+  {
+    if (extension_loaded('modplayer')) {
+      modplayer_stop();
+    }
   }
 }

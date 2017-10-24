@@ -14,6 +14,8 @@ Using [composer](https://getcomposer.org):
 composer install
 ```
 
+To enable sound effects, please install the `modplayer` extension. The project has an installation tutorial and could be found [here](https://github.com/devsdmf/php-modplayer).
+
 ## Multi Player Mode
 
 ```sh
